@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第3章 一切基于pom | maven使用指南</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.5.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter4/chapter4.html" />
+    
+    
+    <link rel="prev" href="../chapter2/chapter2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="3" data-chapter-title="第3章 一切基于pom" data-filepath="chapter3/chapter3.md" data-basepath=".." data-revision="Fri Nov 13 2015 03:40:27 GMT-0800 (PST)">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://ibofine.com" target="blank" class="custom-link">网站主页</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        maven使用指南
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1/chapter1.html">
+            
+                
+                    <a href="../chapter1/chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第1章 maven概览及快速入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2/chapter2.html">
+            
+                
+                    <a href="../chapter2/chapter2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第2章 Windows 和 Eclipse的配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3" data-path="chapter3/chapter3.html">
+            
+                
+                    <a href="../chapter3/chapter3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第3章 一切基于pom
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4/chapter4.html">
+            
+                
+                    <a href="../chapter4/chapter4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第4章 maven依赖特性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5/chapter5.html">
+            
+                
+                    <a href="../chapter5/chapter5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第5章 maven继承特性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter6/chapter6.html">
+            
+                
+                    <a href="../chapter6/chapter6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第6章 maven聚合特性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter7/chapter7.html">
+            
+                
+                    <a href="../chapter7/chapter7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第7章 仓库
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter8/chapter8.html">
+            
+                
+                    <a href="../chapter8/chapter8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        第8章 私服nexus
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter9/chapter9.html">
+            
+                
+                    <a href="../chapter9/chapter9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        第9章 maven的插件和生命周期
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="chapter10/chapter10.html">
+            
+                
+                    <a href="../chapter10/chapter10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        第10章 多环境下构建项目
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="chapter11/chapter11.html">
+            
+                
+                    <a href="../chapter11/chapter11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        第11章 使用maven+svn+jenkins持续集成项目
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >maven使用指南</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x7B2C;3&#x7AE0;-&#x4E00;&#x5207;&#x57FA;&#x4E8E;pom">&#x7B2C;3&#x7AE0; &#x4E00;&#x5207;&#x57FA;&#x4E8E;pom</h1>
+<blockquote>
+<p>&#x672C;&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86;maven&#x7684;&#x6838;&#x5FC3;pom.xml&#x4F5C;&#x7528;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x4E86;maven&#x5750;&#x6807;&#x53D8;&#x91CF;&#x3002;</p>
+</blockquote>
+<h2 id="31-&#x4EC0;&#x4E48;&#x662F;pomxml">3.1 &#x4EC0;&#x4E48;&#x662F;pom.xml</h2>
+<p>POM&#x662F;&#x9879;&#x76EE;&#x5BF9;&#x8C61;&#x6A21;&#x578B;(Project Object Model)&#x7684;&#x7B80;&#x79F0;,&#x5B83;&#x662F;Maven&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;XML&#x8868;&#x793A;&#xFF0C;&#x540D;&#x79F0;&#x53EB;&#x505A;pom.xml&#x3002;maven&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x4E00;&#x5806;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x548C;&#x8DDF;&#x9879;&#x76EE;&#x6709;&#x5173;&#x7684;&#x4F9D;&#x8D56;&#x6587;&#x4EF6;&#x5916;&#xFF0C;&#x8FD8;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E2A;pom.xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x4E86;maven&#x6253;&#x5305;&#x3001;&#x7F16;&#x8BD1;&#x3001;&#x7248;&#x672C;&#x3001;&#x8DEF;&#x5F84;&#x7B49;&#x7B49;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5176;&#x5B9E;&#xFF0C;maven&#x9879;&#x76EE;&#x53EF;&#x4EE5;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x6709;&#xFF0C;&#x751A;&#x81F3;&#x6CA1;&#x6709;&#x4EE3;&#x7801;&#xFF0C;&#x4F46;&#x662F;&#x5FC5;&#x987B;&#x5305;&#x542B;pom.xml&#x6587;&#x4EF6;&#x3002;</p>
+<h2 id="32-maven&#x5750;&#x6807;">3.2 maven&#x5750;&#x6807;</h2>
+<p>maven&#x5750;&#x6807;&#x4E3A;&#x5404;&#x79CD;&#x6784;&#x4EF6;&#x5F15;&#x5165;&#x4E86;&#x79E9;&#x5E8F;&#xFF0C;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x6784;&#x4EF6;&#x90FD;&#x5FC5;&#x987B;&#x660E;&#x786E;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x5750;&#x6807;&#xFF0C;&#x4E00;&#x7EC4;maven&#x5750;&#x6807;&#x5305;&#x542B;&#xFF1A;<code>groupId</code>&#x3001;<code>artifactId</code>&#x3001;<code>version</code>&#x3001;<code>packaging</code>&#x3001;<code>classifier</code></p>
+<!-- more -->
+<table>
+<thead>
+<tr>
+<th style="text-align:right">&#x5750;&#x6807;&#x503C;</th>
+<th style="text-align:left">&#x4ECB;&#x7ECD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">groupId</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;&#x5F53;&#x524D;maven&#x9879;&#x76EE;&#x96B6;&#x5C5E;&#x7684;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#xFF0C;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;maven&#x9879;&#x76EE;&#x3002;&#x4F8B;&#x5982;&#xFF1A;springframework&#x8FD9;&#x4E00;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#xFF0C;&#x5305;&#x542B;&#x591A;&#x4E2A;maven&#x9879;&#x76EE;&#xFF0C;&#x5982;spring-core&#x3001;spring-aop&#x3001;spring-beans&#x3001;spring-webmvc&#x7B49;&#x7B49;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:right">artifactId</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#x7684;maven&#x9879;&#x76EE;&#xFF08;&#x6A21;&#x5757;&#xFF09;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E3A;&#x524D;&#x7F00;&#xFF0C;&#x4F8B;&#x5982;org.hibernate&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:right">version</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;maven&#x9879;&#x76EE;&#x5F53;&#x524D;&#x7684;&#x7248;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:right">packaging</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;maven&#x9879;&#x76EE;&#x7684;&#x6253;&#x5305;&#x65B9;&#x5F0F;&#x3002;&#x4E00;&#x822C;&#x6709;jar&#x3001;war&#x3001;pom&#x7B49;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:right">classifier</td>
+<td style="text-align:left">&#x5B9A;&#x4E49;maven&#x5728;&#x76F8;&#x540C;&#x7248;&#x672C;&#x4E0B;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x6216;&#x8005;jdk&#x4F7F;&#x7528;&#x7684;jar&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="33-pomxml&#x57FA;&#x672C;&#x4ECB;&#x7ECD;">3.3 pom.xml&#x57FA;&#x672C;&#x4ECB;&#x7ECD;</h2>
+<h3 id="331-&#x57FA;&#x7840;&#x6807;&#x7B7E;">3.3.1 &#x57FA;&#x7840;&#x6807;&#x7B7E;</h3>
+<p>&#x57FA;&#x7840;&#x6807;&#x7B7E;&#x63CF;&#x8FF0;&#x4E86;&#x9879;&#x76EE;&#x7684;&#x5750;&#x6807;&#x548C;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#x3002;        </p>
+<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-title">modelVersion</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>com.xxx<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>xxx_api<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">packaging</span>&gt;</span>war<span class="hljs-tag">&lt;/<span class="hljs-title">packaging</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">name</span>&gt;</span>xxx_api Maven Webapp<span class="hljs-tag">&lt;/<span class="hljs-title">name</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">url</span>&gt;</span>http://maven.apache.org<span class="hljs-tag">&lt;/<span class="hljs-title">url</span>&gt;</span>
+</code></pre>
+<h3 id="332-&#x7EE7;&#x627F;&#x6807;&#x7B7E;">3.3.2 &#x7EE7;&#x627F;&#x6807;&#x7B7E;</h3>
+<p>&#x7EE7;&#x627F;&#x6807;&#x7B7E;&#x63CF;&#x8FF0;&#x4E86;&#x7236;&#x9879;&#x76EE;&#x7684;&#x5750;&#x6807;&#x548C;&#x8DEF;&#x5F84;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">parent</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>com.crm<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>crm-parent<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>0.0.1-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">relativePath</span>&gt;</span>../crm-parent/pom.xml<span class="hljs-tag">&lt;/<span class="hljs-title">relativePath</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">parent</span>&gt;</span>
+</code></pre>
+<h3 id="333-&#x805A;&#x5408;&#x6807;&#x7B7E;">3.3.3 &#x805A;&#x5408;&#x6807;&#x7B7E;</h3>
+<p>&#x805A;&#x5408;&#x6807;&#x7B7E;&#x63CF;&#x8FF0;&#x4E86;&#x9700;&#x8981;&#x7BA1;&#x7406;&#x7684;&#x5B50;&#x9879;&#x76EE;&#x7684;&#x8DEF;&#x5F84;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">modules</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">module</span>&gt;</span>../crm-dao<span class="hljs-tag">&lt;/<span class="hljs-title">module</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">module</span>&gt;</span>../crm-service<span class="hljs-tag">&lt;/<span class="hljs-title">module</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">module</span>&gt;</span>../crm-web<span class="hljs-tag">&lt;/<span class="hljs-title">module</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">modules</span>&gt;</span>
+</code></pre>
+<h3 id="334-&#x4F9D;&#x8D56;&#x6807;&#x7B7E;">3.3.4 &#x4F9D;&#x8D56;&#x6807;&#x7B7E;</h3>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">dependencies</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">dependency</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span> javax.servlet <span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>jstl/artifactId&gt;
+        <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>1.2<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">dependency</span>&gt;</span>
+    &#x2026;&#x2026;
+<span class="hljs-tag">&lt;/<span class="hljs-title">dependencies</span>&gt;</span>
+</code></pre>
+<h3 id="335-&#x6784;&#x5EFA;&#x6807;&#x7B7E;">3.3.5 &#x6784;&#x5EFA;&#x6807;&#x7B7E;</h3>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">build</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">finalName</span>&gt;</span>crm-web <span class="hljs-tag">&lt;/<span class="hljs-title">finalName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">resources</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">resource</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">directory</span>&gt;</span>${basedir}/src/${env}/resources<span class="hljs-tag">&lt;/<span class="hljs-title">directory</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">resource</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">resources</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">outputDirectory</span>&gt;</span>${basedir}/src/main/webapp/WEB-INF/classes<span class="hljs-tag">&lt;/<span class="hljs-title">outputDirectory</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">plugins</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-war-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.6<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">configuration</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">warName</span>&gt;</span>xxxxxx<span class="hljs-tag">&lt;/<span class="hljs-title">warName</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">configuration</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-compiler-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.3.2<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+               <span class="hljs-tag">&lt;<span class="hljs-title">configuration</span>&gt;</span>
+                   <span class="hljs-tag">&lt;<span class="hljs-title">source</span>&gt;</span>${jdk.version}<span class="hljs-tag">&lt;/<span class="hljs-title">source</span>&gt;</span>
+                   <span class="hljs-tag">&lt;<span class="hljs-title">target</span>&gt;</span>${jdk.version}<span class="hljs-tag">&lt;/<span class="hljs-title">target</span>&gt;</span>
+               <span class="hljs-tag">&lt;/<span class="hljs-title">configuration</span>&gt;</span>
+           <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">plugins</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">build</span>&gt;</span>
+</code></pre>
+<p><code>resources</code>:&#x63CF;&#x8FF0;&#x5DE5;&#x7A0B;&#x4E2D;&#x8D44;&#x6E90;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><code>outputDirectory</code>&#xFF1A;&#x9879;&#x76EE;&#x8F93;&#x51FA;&#x8DEF;&#x5F84;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9879;&#x76EE;&#x7684;&#x7F16;&#x8BD1;class&#x662F;&#x653E;&#x5728;${basedir}/target&#x4E0B;&#x3002;</p>
+<p><code>plugin</code>&#xFF1A;&#x63D2;&#x4EF6;&#x6807;&#x7B7E;&#xFF0C;&#x63CF;&#x8FF0;&#x9879;&#x76EE;&#x5DE5;&#x7A0B;&#x9700;&#x8981;&#x7684;&#x63D2;&#x4EF6;&#x548C;&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+<p><code>configuration</code>&#xFF1A;&#x63D2;&#x4EF6;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
+<h3 id="336-maven&#x9690;&#x5F0F;&#x53D8;&#x91CF;">3.3.6 maven&#x9690;&#x5F0F;&#x53D8;&#x91CF;</h3>
+<p><code>${basedir}</code>&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;
+<code>${project.build.directory}</code> &#x6784;&#x5EFA;&#x76EE;&#x5F55;&#xFF0C;&#x7F3A;&#x7701;&#x4E3A;<code>target</code>
+<code>${project.build.outputDirectory}</code>&#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x8F93;&#x51FA;&#x76EE;&#x5F55;&#xFF0C;&#x7F3A;&#x7701;&#x4E3A;<code>target/classes</code>
+<code>${project.build.finalName}</code>&#x4EA7;&#x51FA;&#x7269;&#x540D;&#x79F0;&#xFF0C;&#x7F3A;&#x7701;&#x4E3A;<code>${project.artifactId}-${project.version}</code>
+<code>${project.packaging}</code> &#x6253;&#x5305;&#x7C7B;&#x578B;&#xFF0C;&#x7F3A;&#x7701;&#x4E3A;<code>jar</code>
+<code>${project.xxx}</code>&#x5F53;&#x524D;pom&#x6587;&#x4EF6;&#x7684;&#x4EFB;&#x610F;&#x8282;&#x70B9;&#x7684;&#x5185;&#x5BB9;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter2/chapter2.html" class="navigation navigation-prev " aria-label="Previous page: 第2章 Windows 和 Eclipse的配置"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter4/chapter4.html" class="navigation navigation-next " aria-label="Next page: 第4章 maven依赖特性"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"ibofine","useIdentifier":false},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

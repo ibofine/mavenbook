@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第10章 多环境下构建项目 | maven使用指南</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.5.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-disqus/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter11/chapter11.html" />
+    
+    
+    <link rel="prev" href="../chapter9/chapter9.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="10" data-chapter-title="第10章 多环境下构建项目" data-filepath="chapter10/chapter10.md" data-basepath=".." data-revision="Fri Nov 13 2015 03:40:27 GMT-0800 (PST)">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+                
+                <li>
+                    <a href="http://ibofine.com" target="blank" class="custom-link">网站主页</a>
+                </li>
+            
+            
+
+            
+            <li class="divider"></li>
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        maven使用指南
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter1/chapter1.html">
+            
+                
+                    <a href="../chapter1/chapter1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第1章 maven概览及快速入门
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter2/chapter2.html">
+            
+                
+                    <a href="../chapter2/chapter2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第2章 Windows 和 Eclipse的配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter3/chapter3.html">
+            
+                
+                    <a href="../chapter3/chapter3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第3章 一切基于pom
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter4/chapter4.html">
+            
+                
+                    <a href="../chapter4/chapter4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第4章 maven依赖特性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="chapter5/chapter5.html">
+            
+                
+                    <a href="../chapter5/chapter5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        第5章 maven继承特性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="chapter6/chapter6.html">
+            
+                
+                    <a href="../chapter6/chapter6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        第6章 maven聚合特性
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="chapter7/chapter7.html">
+            
+                
+                    <a href="../chapter7/chapter7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        第7章 仓库
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="chapter8/chapter8.html">
+            
+                
+                    <a href="../chapter8/chapter8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        第8章 私服nexus
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="chapter9/chapter9.html">
+            
+                
+                    <a href="../chapter9/chapter9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        第9章 maven的插件和生命周期
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="10" data-path="chapter10/chapter10.html">
+            
+                
+                    <a href="../chapter10/chapter10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        第10章 多环境下构建项目
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="chapter11/chapter11.html">
+            
+                
+                    <a href="../chapter11/chapter11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        第11章 使用maven+svn+jenkins持续集成项目
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >maven使用指南</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x7B2C;10&#x7AE0;-&#x591A;&#x73AF;&#x5883;&#x4E0B;&#x6784;&#x5EFA;&#x9879;&#x76EE;">&#x7B2C;10&#x7AE0; &#x591A;&#x73AF;&#x5883;&#x4E0B;&#x6784;&#x5EFA;&#x9879;&#x76EE;</h1>
+<blockquote>
+<p>&#x672C;&#x7AE0;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#xFF0C;&#x4ECB;&#x7ECD;&#x591A;&#x79CD;&#x90E8;&#x7F72;&#x73AF;&#x5883;&#x4E0B;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x5927;&#x591A;&#x6570;&#x516C;&#x53F8;&#xFF0C;&#x90FD;&#x4F1A;&#x6709;&#x591A;&#x79CD;&#x9879;&#x76EE;&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x3001;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x3001;&#x9884;&#x53D1;&#x5E03;&#x73AF;&#x5883;&#x3001;&#x6B63;&#x5F0F;&#x73AF;&#x5883;&#x2026;
+&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x9047;&#x5230;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;&#x3001;&#x7F51;&#x94F6;&#x63A5;&#x53E3;&#x7684;&#x8D26;&#x53F7;&#x548C;&#x5730;&#x5740;&#x914D;&#x7F6E;&#x3001;&#x90AE;&#x7BB1;&#x548C;&#x77ED;&#x4FE1;&#x8D26;&#x53F7;&#x914D;&#x7F6E;&#x7B49;&#x7B49;&#x3002;&#x90A3;&#x4E48;&#x5728;maven&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x6253;&#x5305;&#x4E0D;&#x540C;&#x914D;&#x7F6E;&#x3002;
+&#x8FD8;&#x662F;&#x7528;&#x6211;&#x4EEC;&#x7684;crm&#x9879;&#x76EE;&#x8FDB;&#x884C;&#x6F14;&#x793A;&#xFF0C;&#x57FA;&#x672C;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#xFF1A;</p>
+<p><img src="https://img.alicdn.com/imgextra/i4/653726111/TB24YnbhXXXXXXqXFXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<!-- more -->
+<h2 id="101-&#x5C5E;&#x6027;&#x914D;&#x7F6E;">10.1 &#x5C5E;&#x6027;&#x914D;&#x7F6E;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5728;parent&#x9879;&#x76EE;&#x4E2D;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x5E93;&#x94FE;&#x63A5;&#x548C;redis&#x94FE;&#x63A5;&#xFF0C;&#x6B63;&#x5F0F;&#x73AF;&#x5883;&#x548C;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x6B64;&#x65F6;&#x5728;parent&#x4E2D;&#x7684;pom.xml&#x4E2D;&#x6DFB;&#x52A0;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;</p>
+<p><img src="https://img.alicdn.com/imgextra/i1/653726111/TB2E8LFhXXXXXbgXXXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<pre><code class="lang-xml">
+<span class="hljs-tag">&lt;<span class="hljs-title">profiles</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>dev<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">properties</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dataSource.url</span>&gt;</span>jdbc:mysql://192.168.100.211:3306/crm<span class="hljs-tag">&lt;/<span class="hljs-title">dataSource.url</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dataSource.username</span>&gt;</span>dev<span class="hljs-tag">&lt;/<span class="hljs-title">dataSource.username</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dataSource.password</span>&gt;</span>devpassword<span class="hljs-tag">&lt;/<span class="hljs-title">dataSource.password</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">redis.host</span>&gt;</span>192.168.100.211<span class="hljs-tag">&lt;/<span class="hljs-title">redis.host</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">redis.port</span>&gt;</span>6379<span class="hljs-tag">&lt;/<span class="hljs-title">redis.port</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">redis.password</span>&gt;</span>redispassword<span class="hljs-tag">&lt;/<span class="hljs-title">redis.password</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">activation</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">activeByDefault</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">activeByDefault</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">activation</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">profile</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">id</span>&gt;</span>online<span class="hljs-tag">&lt;/<span class="hljs-title">id</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">properties</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dataSource.url</span>&gt;</span>jdbc:mysql://192.168.200.211:3406/crm<span class="hljs-tag">&lt;/<span class="hljs-title">dataSource.url</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dataSource.username</span>&gt;</span>online<span class="hljs-tag">&lt;/<span class="hljs-title">dataSource.username</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">dataSource.password</span>&gt;</span>onlinepassword<span class="hljs-tag">&lt;/<span class="hljs-title">dataSource.password</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">redis.host</span>&gt;</span>192.168.200.211<span class="hljs-tag">&lt;/<span class="hljs-title">redis.host</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">redis.port</span>&gt;</span>6479<span class="hljs-tag">&lt;/<span class="hljs-title">redis.port</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">redis.password</span>&gt;</span>redispassword<span class="hljs-tag">&lt;/<span class="hljs-title">redis.password</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">properties</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">profile</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">profiles</span>&gt;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;id&#x4E3A;dev&#x7684;&#x662F;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;id&#x4E3A;online&#x7684;&#x6B63;&#x5F0F;&#x73AF;&#x5883;&#xFF0C;&#x5176;&#x4E2D;activeByDefault&#x8868;&#x793A;default&#x4E3A;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;&#x610F;&#x601D;&#x8BF4;&#x5F53;&#x4E0D;&#x6DFB;&#x52A0;-P&#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x4EE5;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7684;&#x914D;&#x7F6E;&#x6253;&#x5305;&#x3002;</p>
+<h2 id="102-&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x914D;&#x7F6E;">10.2 &#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x914D;&#x7F6E;</h2>
+<p>&#x5982;&#x56FE;&#xFF0C;&#x5728;crm-web&#x4E2D;&#xFF0C;&#x6709;application.properties&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6B64;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x4E86;web&#x9879;&#x76EE;&#x4E2D;&#x9700;&#x8981;&#x7684;&#x6240;&#x6709;&#x914D;&#x7F6E;&#xFF0C;&#x5176;&#x4E2D;&#x4E5F;&#x5305;&#x542B;&#x6570;&#x636E;&#x5E93;&#x94FE;&#x63A5;&#x548C;redis&#x94FE;&#x63A5;&#x3002;&#x4E3A;&#x4E86;&#x80FD;&#x8BA9;maven&#x7684;maven-resources-plugin&#x63D2;&#x4EF6;&#x66FF;&#x6362;&#x5173;&#x952E;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x9700;&#x8981;&#x66FF;&#x6362;&#x7684;&#x5730;&#x65B9;&#x7528;<code>${}</code>&#x4EE3;&#x66FF;&#x3002;</p>
+<p><img src="https://img.alicdn.com/imgextra/i2/653726111/TB20UzDhXXXXXbaXXXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x6240;&#x6709;&#x9700;&#x8981;&#x66FF;&#x6362;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x547D;&#x540D;&#x9700;&#x8981;&#x4E0E;parent&#x9879;&#x76EE;pom.xml&#x4E2D;&#x7684;&#x6807;&#x7B7E;&#x540D;&#x76F8;&#x540C;&#xFF0C;&#x5982;&#x56FE;&#x3002;</strong></p>
+<p><img src="https://img.alicdn.com/imgextra/i2/653726111/TB2oFbdhXXXXXcEXpXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<h1 id="103-pomxml&#x914D;&#x7F6E;">10.3 pom.xml&#x914D;&#x7F6E;</h1>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5728;crm-web&#x9879;&#x76EE;pom.xml&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;maven-resources-plugin&#x63D2;&#x4EF6;&#xFF0C;&#x540C;&#x65F6;&#x5728;resource&#x4E2D;&#xFF0C;&#x8BBE;&#x7F6E;&#x8FC7;&#x6EE4;&#x914D;&#x7F6E;filtering&#x4E3A;<code>true</code>&#x3002;</p>
+<p><img src="https://img.alicdn.com/imgextra/i2/653726111/TB2aZTAhXXXXXb.XXXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<pre><code class="lang-xml">
+<span class="hljs-tag">&lt;<span class="hljs-title">build</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">finalName</span>&gt;</span>crm-web<span class="hljs-tag">&lt;/<span class="hljs-title">finalName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">resources</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">resource</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">directory</span>&gt;</span>${basedir}/src/main/resources<span class="hljs-tag">&lt;/<span class="hljs-title">directory</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">filtering</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-title">filtering</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">resource</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">resources</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">outputDirectory</span>&gt;</span>${basedir}/src/main/webapp/WEB-INF/classes<span class="hljs-tag">&lt;/<span class="hljs-title">outputDirectory</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">plugins</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">plugin</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">groupId</span>&gt;</span>org.apache.maven.plugins<span class="hljs-tag">&lt;/<span class="hljs-title">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">artifactId</span>&gt;</span>maven-resources-plugin<span class="hljs-tag">&lt;/<span class="hljs-title">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">version</span>&gt;</span>2.7<span class="hljs-tag">&lt;/<span class="hljs-title">version</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">configuration</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">encoding</span>&gt;</span>UTF-8<span class="hljs-tag">&lt;/<span class="hljs-title">encoding</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">configuration</span>&gt;</span>
+             <span class="hljs-tag">&lt;/<span class="hljs-title">plugin</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">plugins</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">build</span>&gt;</span>
+</code></pre>
+<h2 id="104-&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x6253;&#x5305;">10.4 &#x4E0D;&#x540C;&#x73AF;&#x5883;&#x6253;&#x5305;</h2>
+<p>&#x914D;&#x7F6E;&#x5DF2;&#x5B8C;&#x6210;&#xFF0C;&#x73B0;&#x5728;&#x6765;&#x505A;&#x6253;&#x5305;&#x6D4B;&#x8BD5;&#x3002;</p>
+<h3 id="1041-&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x6253;&#x5305;">10.4.1 &#x5F00;&#x53D1;&#x73AF;&#x5883;&#x6253;&#x5305;</h3>
+<ul>
+<li>&#x547D;&#x4EE4;&#x65B9;&#x5F0F;
+<code>mvn clean install &#x2013;Pdev</code></li>
+</ul>
+<pre><code>![Alt text](https://img.alicdn.com/imgextra/i4/653726111/TB2mx2KhXXXXXajXXXXXXXXXXXX_!!653726111.png)
+
+![Alt text](https://img.alicdn.com/imgextra/i4/653726111/TB272DxhXXXXXcCXXXXXXXXXXXX_!!653726111.png)
+</code></pre><ul>
+<li>Eclipse&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;
+&#x53F3;&#x51FB;crm-parent&#x2014;&gt;Run As&#x2014;&gt;Run configuations 
+&#x5728;Goals&#x4E2D;&#x952E;&#x5165;<code>clean install &#x2013;Pdev</code>&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;Run
+<strong>&#x6CE8;&#x610F;&#xFF1A;-P&#x540E;&#x7684;&#x5B57;&#x6BCD;&#x4EE3;&#x8868;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x6216;&#x6B63;&#x5F0F;&#x73AF;&#x5883;&#x7684;ID&#x3002;</strong>
+&#x8FD0;&#x884C;&#x4E0D;&#x8D77;&#x6765;&#x8BF7;&#x770B;&#x7B2C;&#x4E8C;&#x7AE0;2.2&#x7AE0;&#x8282;
+&#x5982;&#x56FE;</li>
+</ul>
+<p><img src="https://img.alicdn.com/imgextra/i1/653726111/TB2JXjjhXXXXXbUXpXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<p>&#x56E0;&#x4E3A;parent&#x8BBE;&#x7F6E;&#x4E86;&#x805A;&#x5408;&#x5173;&#x7CFB;&#xFF0C;&#x6240;&#x4EE5;&#x4ED6;&#x7684;&#x5B50;&#x9879;&#x76EE;&#x90FD;&#x6253;&#x5305;&#x5B8C;&#x6210;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;</p>
+<p><img src="https://img.alicdn.com/imgextra/i4/653726111/TB2uFjLhXXXXXXLXXXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<p>&#x9A8C;&#x8BC1;&#x6211;&#x4EEC;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF0C;&#x5728;crm-web&#x9879;&#x76EE;&#x4E2D;target/crm-web/WEB-INF/classes/&#x4E2D;&#xFF0C;&#x6253;&#x5F00;application.properties&#xFF0C;&#x53D1;&#x73B0;&#x5DF2;&#x7ECF;&#x66FF;&#x6362;&#x6210;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;</p>
+<p><img src="https://img.alicdn.com/imgextra/i4/653726111/TB27EfzhXXXXXb8XXXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<p>&#x540C;&#x6837;&#xFF0C;&#x6253;&#x5F00;war&#x5305;&#x9A8C;&#x8BC1;application.properties&#xFF0C;&#x4E5F;&#x662F;&#x6B63;&#x786E;&#x7684;&#x3002;</p>
+<p><img src="https://img.alicdn.com/imgextra/i1/653726111/TB2zRzFhXXXXXaYXXXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<h3 id="1042-&#x6B63;&#x5F0F;&#x73AF;&#x5883;&#x6253;&#x5305;">10.4.2 &#x6B63;&#x5F0F;&#x73AF;&#x5883;&#x6253;&#x5305;</h3>
+<p>&#x4E0E;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x7684;&#x6B65;&#x9AA4;&#x4E00;&#x81F4;&#x3002;</p>
+<ul>
+<li>&#x547D;&#x4EE4;&#x65B9;&#x5F0F;&#xFF1A;
+<code>mvn clean install &#x2013;Ponline</code></li>
+</ul>
+<p><img src="https://img.alicdn.com/imgextra/i2/653726111/TB2eKLohXXXXXayXpXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<ul>
+<li>Eclipse&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#xFF1A;</li>
+</ul>
+<p>&#x53F3;&#x51FB;crm-parent&#x2014;&gt;Run As&#x2014;&gt;Run configuations 
+&#x5728;Goals&#x4E2D;&#x952E;&#x5165;<code>clean install &#x2013;Ponline</code>&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;Run
+<strong>&#x6CE8;&#x610F;&#xFF1A;-P&#x540E;&#x7684;&#x5B57;&#x6BCD;&#x4EE3;&#x8868;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x6216;&#x6B63;&#x5F0F;&#x73AF;&#x5883;&#x7684;ID&#x3002;</strong>
+&#x5982;&#x56FE;</p>
+<p><img src="https://img.alicdn.com/imgextra/i3/653726111/TB2RRLkhXXXXXaVXpXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<p><img src="https://img.alicdn.com/imgextra/i1/653726111/TB2FBTphXXXXXXoXpXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+<p><img src="https://img.alicdn.com/imgextra/i1/653726111/TB248jqhXXXXXXsXpXXXXXXXXXX_!!653726111.png" alt="Alt text"></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter9/chapter9.html" class="navigation navigation-prev " aria-label="Previous page: 第9章 maven的插件和生命周期"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter11/chapter11.html" class="navigation navigation-next " aria-label="Next page: 第11章 使用maven+svn+jenkins持续集成项目"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"ibofine","useIdentifier":false},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
